@@ -1,10 +1,8 @@
-# N.I.V.I.X PROJECT
+# N.I.V.I.X
 
 Parent repository for the **Nivix** project. The code lives in three child repositories; this repo holds the roadmap and the cross-repo documentation.
 
 > Nivix is a personal, portable, local-first AI agent platform. Built on DeepSeek Harness, with a temporal memory and a sandboxed cloud helper. No Docker, no WSL2.
-
-> GitHub slug: `N.I.V.I.X_PROJECT` — GitHub does not allow spaces in repository names. The local folder keeps the space.
 
 ## Repositories
 
@@ -42,7 +40,7 @@ Clones land in `repos/` (gitignored). The parent stays light; child repos are in
 ## Layout
 
 ```
-N.I.V.I.X PROJECT/
+N.I.V.I.X/
 ├── README.md
 ├── roadmap/
 ├── repos/          # clone targets (gitignored)
