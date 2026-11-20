@@ -46,6 +46,8 @@ Master roadmap. Architecture in [`docs/architecture.md`](./docs/architecture.md)
 | INF-04 | Structured-output validation (`json_object`) | P0 | ⬜ | INF-03 | Valid JSON over 20 runs |
 | INF-05 | Ling 3.0 Tiny floor model | P1 | ⏸️ | INF-01 | Runs on CPU/iGPU/GPU |
 | INF-06 | **Port Ni-Strata/UnbiasedStrata to native Windows (CUDA 12.x)** | P2 | ⏸️ | INF-01 | Windows build serves `/v1` on NVIDIA |
+| INF-07 | MTP/DSpark speculative decoding for Qwen3.6-35B-A3B | P1 | ⏸️ | INF-01 | Draft/spec decode works; measured tok/s gain |
+| INF-08 | TurboQuant KV cache support in Ni-Strata | P1 | ⏸️ | INF-01 | KV type supported; memory down; speed measured |
 
 **Exit:** local agent completes a tool-using task with zero cloud calls.
 
@@ -192,3 +194,4 @@ Master roadmap. Architecture in [`docs/architecture.md`](./docs/architecture.md)
 - Rewritten after architecture lock.
 - Round 7 answers applied: dropped omnirouter, Unreal Agent, legacy memory, zen naming, hexstrike, Blender, Minecraft, image gen, scale-out workers; moved Canarytokens to v1; moved SSH/medical/mental-health/computer-use/ego-lite to v1.x; browser-use to v1; mobile/Discord/voice to v2; Ni-Watch/Ni-Volt to v3; replaced FalkorDB Lite with LadybugDB (Windows-native, no WSL2).
 - Inference platform: v1 targets Linux/NVIDIA; **native Windows port is the plan, deferred** (INF-06).
+- Baseline benchmark on the prebuilt llama.cpp CUDA backend: **pp512 ≈ 82.3 t/s · tg128 ≈ 23.8 t/s** (Qwen3.6-35B-A3B Q4_K_M, RTX 3050 6 GB). See `benchmarks/2026-11-20-local-inference.md`. Ni-Strata build blocked: no CUDA toolkit/headers.
