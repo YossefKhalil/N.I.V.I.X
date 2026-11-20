@@ -46,7 +46,8 @@ Master roadmap. Architecture in [`docs/architecture.md`](./docs/architecture.md)
 | INF-04 | Structured-output validation (`json_object`) | P0 | ⬜ | INF-03 | Valid JSON over 20 runs |
 | INF-05 | Ling 3.0 Tiny floor model | P1 | ⏸️ | INF-01 | Runs on CPU/iGPU/GPU |
 | INF-06 | **Port Ni-Strata/UnbiasedStrata to native Windows (CUDA 12.x)** | P2 | ⏸️ | INF-01 | Windows build serves `/v1` on NVIDIA |
-| INF-07 | MTP/DSpark speculative decoding for Qwen3.6-35B-A3B | P1 | ⏸️ | INF-01 | Draft/spec decode works; measured tok/s gain |
+| INF-07 | MTP speculative decoding for Qwen3.6-35B-A3B (`draft-mtp`, MTP GGUF) | P1 | ⏸️ | INF-01 | Download MTP GGUF; `--spec-draft-n-max 2`; measured vs 23.77 t/s |
+| INF-07b | DSpark/DFlash/n-gram evaluation | P2 | ⏸️ | INF-01 | Evaluated; DFlash/n-gram net loss on A3B; DSpark drafter unavailable |
 | INF-08 | TurboQuant KV cache support in Ni-Strata | P1 | ⏸️ | INF-01 | KV type supported; memory down; speed measured |
 
 **Exit:** local agent completes a tool-using task with zero cloud calls.
